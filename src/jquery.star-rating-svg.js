@@ -243,7 +243,16 @@
       var $starSet = $el.data(_name);
       return $starSet._state.rating;
     },
+    
+    setDisabled: function() {
+      var _name = 'plugin_' + pluginName;
+      var $el = $(this);
+      var $starSet = $el.data(_name);
+      var $stars = $starSet.$stars;
 
+      $stars.off();
+    },
+    
     resize: function(newSize) {
       var _name = 'plugin_' + pluginName;
       var $el = $(this);
